@@ -14,6 +14,6 @@ public class LinkedinLoginTest extends BaseTest {
     public void successfulLoginTest() {
         user.openLandingPage();
         user.logIn("mineqabox@gmail.com","qualityassurance1");
-        user.shouldBeLoggedIn(the("titles", containsString("LinkedIn")));
+        user.shouldBeLoggedIn();
     }
 }

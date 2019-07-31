@@ -1,9 +1,8 @@
 package step;
 
 import net.thucydides.core.annotations.Step;
-import net.thucydides.core.matchers.BeanMatcher;
-import static net.thucydides.core.matchers.BeanMatcherAsserts.shouldMatch;
 import net.thucydides.core.steps.ScenarioSteps;
+import org.junit.Assert;
 import page.HomePage;
 import page.LandingPage;
 
@@ -20,8 +19,8 @@ public class UserSteps extends ScenarioSteps {
     }
 
     @Step
-    public void shouldBeLoggedIn(BeanMatcher... matchers){
-        shouldMatch(homePage().getTitle(), matchers);
+    public void shouldBeLoggedIn(){
+        Assert.assertTrue("Home page is not loaded", (homePage().getTitle()).contains("LinkedIn"));
     }
 
     private LandingPage landingPage() {
