@@ -9,13 +9,13 @@ import org.openqa.selenium.WebDriver;
 @DefaultUrl("https://www.linkedin.com")
 public class LandingPage extends PageObject {
 
-    @FindBy(xpath = "//input[@id='login-email']")
+    @FindBy(xpath = "//input[@name='session_key']")
     WebElementFacade userEmailField;
 
-    @FindBy(xpath = "//input[@id='login-password']")
+    @FindBy(xpath = "//input[@name='session_password']")
     WebElementFacade userPasswordField;
 
-    @FindBy(xpath = "//input[@id='login-submit']")
+    @FindBy(xpath = "//button[@class='sign-in-form__submit-btn']")
     WebElementFacade signInBtn;
 
     public LandingPage(WebDriver driver) {
