@@ -2,33 +2,38 @@ package step;
 
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.steps.ScenarioSteps;
-import org.junit.Assert;
 import page.HomePage;
 import page.LandingPage;
+import page.LoginPage;
 
 public class UserSteps extends ScenarioSteps {
 
+    LandingPage landingPage;
+    LoginPage loginPage;
+    HomePage homePage;
+
     @Step
     public void openLandingPage() {
-        landingPage().open();
+        landingPage.open();
     }
 
     @Step
-    public void logIn(String userEmail, String userPassword){
-        landingPage().loginWithValidCredentials(userEmail,userPassword);
+    public void clickOnButton(String buttonText) {
+        landingPage.clickOnButtonWithText(buttonText);
     }
 
     @Step
-    public void shouldBeLoggedIn(){
-        Assert.assertTrue("Home page is not loaded", (homePage().getTitle()).contains("LinkedIn"));
+    public void login(String userEmail, String userPassword) {
+        loginPage.login(userEmail, userPassword);
     }
 
-    private LandingPage landingPage() {
-        return getPages().get(LandingPage.class);
+    @Step
+    public boolean isHomePageLoaded() {
+        return homePage.isPageLoaded();
     }
 
-    private HomePage homePage() {
-        return getPages().get(HomePage.class);
+    @Step
+    public boolean isLoginPageLoaded() {
+        return loginPage.isPageLoaded();
     }
 }
-
