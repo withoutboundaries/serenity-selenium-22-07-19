@@ -22,7 +22,7 @@ public class BaseTest {
 
     @Before
     public void setupDriver() throws MalformedURLException {
-        //WebDriverManager.chromedriver().setup();
+        WebDriverManager.chromedriver().setup();
         /*DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setBrowserName("chrome");
         capabilities.setVersion("76.0");
