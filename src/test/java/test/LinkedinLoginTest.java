@@ -10,7 +10,7 @@ import static java.lang.Thread.sleep;
 public class LinkedinLoginTest extends BaseTest {
 
     @Test
-    public void successfulLoginTest() throws InterruptedException {
+    public void successfulLoginTest()  {
         user.openLandingPage();
     }
 }

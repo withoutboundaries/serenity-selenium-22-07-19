@@ -1,7 +1,7 @@
 Login
 
 Meta:
-@tag login
+@login
 
 Narrative:
   In order to use app functionality
@@ -10,7 +10,8 @@ Narrative:
 
 Scenario: Successful user login
 Meta:
-@tag login01
+@login01
+@smoke
 Given I open Landing page
 When I click on 'Sign in' button
 Then I should be on Login page
@@ -23,7 +24,8 @@ Examples:
 
 Scenario: Unsuccessful user login in order to remain on Login page
 Meta:
-@tag login02
+@login02
+@smoke
 Given I open Landing page
 When I click on 'Sign in' button
 Then I should be on Login page
@@ -35,7 +37,7 @@ Examples:
 
 Scenario: Unsuccessful user login in order to fall to Error Page
 Meta:
-@tag login02
+@login03
 Given I open Landing page
 When I click on 'Sign in' button
 Then I should be on Login page

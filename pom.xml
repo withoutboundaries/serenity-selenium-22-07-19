@@ -150,7 +150,9 @@
                                 <webdriver.driver>chrome</webdriver.driver>
                                 <webdriver.remote.url>http://localhost:4444/wd/hub</webdriver.remote.url>
                                 <!--                                <webdriver.remote.url>http://34.220.181.94:4444/wd/hub</webdriver.remote.url>-->
+<!--
                                 <serenity.driver.capabilities>enableVNC:true;enableVideo:true;sessionTimeout:2m;timeZone:America/Los_Angeles;</serenity.driver.capabilities>
+-->
                             </systemPropertyVariables>
                         </configuration>
                         <executions>
@@ -183,6 +185,11 @@
                             </includes>
                             <systemPropertyVariables>
                                 <!--To Do-->
+                                <webdriver.remote.driver>IE</webdriver.remote.driver>
+                                <webdriver.remote.url>http://iownittau1:xpqizD37oGnPsU6RsQ7N@hub-cloud.browserstack.com/wd/hub</webdriver.remote.url>
+<serenity.driver.capabilities>os:Windows;os_version:XP; browser:IE; browser_version:7.0; </serenity.driver.capabilities>
+
+
                             </systemPropertyVariables>
                         </configuration>
                         <executions>

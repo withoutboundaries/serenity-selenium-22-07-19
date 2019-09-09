@@ -17,8 +17,8 @@ public class BaseTest {
     @Steps
     protected UserSteps user;
 
-    //@Managed(uniqueSession = true)
-    //private WebDriver webdriver;
+    @Managed(uniqueSession = true)
+    private WebDriver webdriver;
 
     @Before
     public void setupDriver() throws MalformedURLException {
